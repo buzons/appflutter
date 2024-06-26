@@ -18,7 +18,7 @@ class Miclase extends StatelessWidget{
 }
 
 
-#homepage
+##homepage
 
 import 'dart:convert';
 
@@ -74,7 +74,7 @@ class HomePage extends StatelessWidget {
 
 
 
-# buscar
+## buscar
 
 import 'package:flutter/material.dart';
 import 'package:sena_project/models/product.dart';
@@ -200,7 +200,7 @@ class ProductSearch extends SearchDelegate<Products> {
  }
 
 
-#detalle productos
+##detalle productos
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -268,7 +268,7 @@ class ProductDetailsDialog {
 }
 
 
-# error page
+## error page
 
 import 'package:flutter/material.dart';
 
@@ -285,7 +285,7 @@ class ErrorPage extends StatelessWidget {
 
 
 
-# datos page
+## datos page
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -457,7 +457,7 @@ class _DatoPageState extends State<DatoPage> {
 }
 
 
-# carrito compra
+##carrito compra
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -541,7 +541,7 @@ class _CarritoPageState extends State<CarritoPage> {
 }
 
 
-#carga page
+##carga page
 
 import 'package:flutter/material.dart';
 
