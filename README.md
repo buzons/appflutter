@@ -457,7 +457,7 @@ class _DatoPageState extends State<DatoPage> {
 }
 
 
-##carrito compra
+## carrito compra
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -541,7 +541,7 @@ class _CarritoPageState extends State<CarritoPage> {
 }
 
 
-##carga page
+## carga page
 
 import 'package:flutter/material.dart';
 
