@@ -1,5 +1,6 @@
-## main
->import 'package:flutter/material.dart';
+### main
+```
+import 'package:flutter/material.dart';
 import 'home_page.dart';
 
 void main(){
@@ -16,16 +17,14 @@ class Miclase extends StatelessWidget{
    );
  } 
 }
->
+```
 
-## homepage
-
+### homepage
+```
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:sena_project/models/product.dart';
-
 import 'widgets/carga_page.dart';
 import 'widgets/datos_page.dart';
 import 'widgets/error_page.dart';
@@ -72,10 +71,10 @@ class HomePage extends StatelessWidget {
   }
 }
 
+```
 
-
-## buscar
-
+### buscar
+```
 import 'package:flutter/material.dart';
 import 'package:sena_project/models/product.dart';
 import 'package:intl/intl.dart';
@@ -161,7 +160,7 @@ class ProductSearch extends SearchDelegate<Products> {
                   ),
                   SizedBox(height: 8.0),
                   Text(
-                    '\$${NumberFormat('#,##0.00', 'en_US').format(product.price)}', // Precio formateado
+                    '\$${NumberFormat('#,##0.00', 'en_US').format(product.price)}', 
                     style: TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
@@ -199,12 +198,12 @@ class ProductSearch extends SearchDelegate<Products> {
   }
  }
 
+```
 
-## detalle productos
-
+### detalle productos
+```
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import '../models/product.dart';
 
 class ProductDetailsDialog {
@@ -267,9 +266,10 @@ class ProductDetailsDialog {
   }
 }
 
+```
 
-## error page
-
+### error page
+```
 import 'package:flutter/material.dart';
 
 class ErrorPage extends StatelessWidget {
@@ -282,17 +282,17 @@ class ErrorPage extends StatelessWidget {
     return Center(child: Text('ERROR 404'));
   }
 }
+```
 
 
-
-## datos page
-
+### datos page
+```
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:sena_project/widgets/producto_details.dart';
 import 'package:sena_project/widgets/search_page.dart';
 import '../models/product.dart';
-import '../widgets/carrito_compra.dart'; // Importa la página del carrito
+import '../widgets/carrito_compra.dart';
 
 class DatoPage extends StatefulWidget {
   final List<Products> products;
@@ -307,7 +307,7 @@ class DatoPage extends StatefulWidget {
 }
 
 class _DatoPageState extends State<DatoPage> {
-  List<Products> _cartItems = []; // Lista para almacenar los productos en el carrito
+  List<Products> _cartItems = []; 
   String _searchQuery = '';
 
   @override
@@ -348,13 +348,13 @@ class _DatoPageState extends State<DatoPage> {
           // Aplica la lógica de filtro según el texto de búsqueda
           if (_searchQuery.isNotEmpty &&
               !product.name.toLowerCase().contains(_searchQuery.toLowerCase())) {
-            return Container(); // Devuelve un contenedor vacío si no coincide con la búsqueda
+            return Container(); 
           }
           return Card(
             margin: EdgeInsets.all(10.0),
             child: InkWell(
               onTap: () {
-                ProductDetailsDialog.show(context, product); // Muestra los detalles del producto
+                ProductDetailsDialog.show(context, product);
               },
               child: Padding(
                 padding: EdgeInsets.all(16.0),
@@ -386,7 +386,7 @@ class _DatoPageState extends State<DatoPage> {
                     ),
                     SizedBox(height: 8.0),
                     Text(
-                      '\$${NumberFormat('#,##0.00', 'en_US').format(product.price)}', // Precio formateado
+                      '\$${NumberFormat('#,##0.00', 'en_US').format(product.price)}', 
                       style: TextStyle(
                         fontSize: 18.0,
                         fontWeight: FontWeight.bold,
@@ -419,7 +419,7 @@ class _DatoPageState extends State<DatoPage> {
             ).then((value) {
               // Actualiza la lista _cartItems con el valor devuelto
               setState(() {
-                _cartItems = value ?? []; // Si el valor es null, se asigna una lista vacía
+                _cartItems = value ?? []; 
               });
             });
           } else {
@@ -455,10 +455,10 @@ class _DatoPageState extends State<DatoPage> {
     });
   }
 }
+```
 
-
-## carrito compra
-
+### carrito compra
+```
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../models/product.dart';
@@ -492,7 +492,7 @@ class _CarritoPageState extends State<CarritoPage> {
             trailing: IconButton(
               icon: Icon(Icons.delete),
               onPressed: () {
-                _removeFromCart(product); // Elimina el producto del carrito
+                _removeFromCart(product); 
               },
             ),
           );
@@ -510,7 +510,7 @@ class _CarritoPageState extends State<CarritoPage> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  _proceedToCheckout(); // Implementa la lógica para proceder con el pago o agregar más productos
+                  _proceedToCheckout(); 
                 },
                 child: Text('Pagar'),
               ),
@@ -536,13 +536,13 @@ class _CarritoPageState extends State<CarritoPage> {
   }
 
   void _proceedToCheckout() {
-    // Implementa la lógica para proceder con el pago o agregar más productos
+    
   }
 }
-
+```
 
 ## carga page
-
+```
 import 'package:flutter/material.dart';
 
 class CargaPage extends StatelessWidget {
@@ -555,5 +555,5 @@ class CargaPage extends StatelessWidget {
     return Center(child: CircularProgressIndicator());
   }
 }
-
+```
 
