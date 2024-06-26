@@ -1,5 +1,5 @@
 ## main
-import 'package:flutter/material.dart';
+>import 'package:flutter/material.dart';
 
 import 'home_page.dart';
 
@@ -200,7 +200,7 @@ class ProductSearch extends SearchDelegate<Products> {
  }
 
 
-##detalle productos
+## detalle productos
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
